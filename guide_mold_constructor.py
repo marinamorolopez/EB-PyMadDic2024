@@ -59,10 +59,9 @@ def knock_in_mid(gene_seq):
         print('Invalid input. Introduce positive number. ')
         mutation_position = int(input("Introduce the numeric position of the mutation base (e.g. 1, 25, 203): "))
     
-    mutation_base = input("Introduce the new base(s) to be in the defined mutation position (e.g. A, CAG, CCGT, GACTA): ")
+    mutation_base = input("Introduce the new base to be in the defined mutation position (e.g. A, CAG, CCGT, GACTA): ")
             
     DNA_guide = gene_seq[mutation_position-25:mutation_position+25]
-    mold = DNA_guide[:]
     mutated_gene_seq = gene_seq[:mutation_position-1] + mutation_base + gene_seq[mutation_position:]
     mold = mutated_gene_seq[mutation_position-25:mutation_position+25]
     
